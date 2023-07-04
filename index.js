@@ -42,17 +42,17 @@ get(evaluationRef).then((snapshot) => {
     for (const evaluationId in evaluations) {
     const evaluation = evaluations[evaluationId] 
     const scores = {
-      knowledgeDuties: evaluation.KOF_2,
-      productivity: evaluation.Productivity_3,
+      knowledgeDuties: evaluation.performance_indicators_1,
+      productivity: evaluation.KOF_2,
       accuracy: evaluation.Accuracy_3,
       attendance: evaluation.Attendance_4,
       punctuality: evaluation.Punctuality_5,
       efficiency: evaluation.Effectiveness_6,
       priorities: evaluation.Prioritize_7,
-      communication: evaluation.Communication_8,
+      communication: evaluation.interpersonal_8,
       adaptility: evaluation.adaptility_9,
-      flexibility: evaluation.Flexibility_10,
-      cooperative: evaluation.Cooperative_11
+      flexibility: evaluation.flexibility_10,
+      cooperative: evaluation.cooperative_11
     }
         createUserBox(evaluation.name, evaluation.appraisalPeriod, evaluation.date, evaluation.position, evaluation.average, scores)
     }
