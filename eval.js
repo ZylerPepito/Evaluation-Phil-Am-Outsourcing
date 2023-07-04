@@ -233,7 +233,22 @@ nextBtn.forEach((button) => {
 //Back Button
 
 const backBtn = document.getElementById('back-page-btn') 
+const backBtn2 = document.getElementById('back-page-btn2')
 
+backBtn2.addEventListener("click", function() {
+  // Hide the current step
+  steps[currentStep].style.display = "none";
+  
+  // Update the current step
+  currentStep -= 1;
+  
+  if (currentStep < 0) {
+    currentStep = 0; // Set current step to the first step
+  }
+  
+  // Show the previous step
+  steps[currentStep].style.display = "flex";
+});
 backBtn.addEventListener("click", function() {
   // Hide the current step
   steps[currentStep].style.display = "none";
@@ -260,7 +275,7 @@ restartFormBtn.addEventListener("click", function() {
 });
 
 const choicesBtns = document.querySelectorAll('.choice')
-const choiceList = document.querySelectorAll('.choices')
+
 
 choicesBtns.forEach(function(button) {
   button.addEventListener("click", function() {

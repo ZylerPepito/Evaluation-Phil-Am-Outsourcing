@@ -76,21 +76,11 @@ function createUserBox(username, appraisal, date, position, average, scores) {
     usernameElement.textContent = username;
     nameBox.appendChild(usernameElement);
 
-    const smallDiv = document.createElement('div');
-    smallDiv.classList.add('smallDiv')
-    
+    const badge =  `<h4>${date} <span class="label">${average}</span></h4>`;
 
-    const dateElement = document.createElement('h6');
-    dateElement.textContent =  date + " | ";
-    const averageElement = document.createElement('h6');
-    averageElement.classList.add('average-text')
-
-    smallDiv.appendChild(dateElement)
-    smallDiv.appendChild(averageElement)
-    averageElement.textContent = "AVG:" + " " + average;
-
-    nameBox.appendChild(smallDiv)
+  nameBox.insertAdjacentHTML("beforeend", badge);
   
+
     const revealDetailsBox = document.createElement('div');
     revealDetailsBox.classList.add('reveal-details-box');
   
