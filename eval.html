@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Source+Serif+4:wght@300&display=swap" rel="stylesheet">
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--styles-->
+    <link rel="stylesheet" href="eval.css">
+    
+    <title>Evaluation - PhilAm Outsourcing </title>
+</head>
+<body>
+ <nav>
+    <div class="logo">
+        <a href="#"><img src="logo1.png" alt="Logo"></a>
+    </div>
+ <div class="toggle-btn">
+    <i class="fas fa-bars"></i>
+ </div>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="inPage" href="#">Evaluation</a></li>
+        <li><a href="respond.html">Respondants</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <h1>Steps For Evaluation</h1>
+      <main>
+            <div id="modal-step-form">
+                  <div class="step">
+                      <h3>Step 1/3</h3>
+                      <h2> Fill in Details</h2>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam aliquam aspernatur libero provident omnis eius consequuntur cumque, cum voluptatibus debitis. Sequi, expedita laudantium? At culpa dolore voluptas, in consequatur officia.</p>
+                      <hr>
+                      <label for="employee-name">Name</label>
+                      <input type="text" name="employee-name" id="employee-name">
+                      <label for="position">Position</label>
+                      <input type="text" name="position" id="position">
+                      <label for="appraisal-period">Appraisal Period:</label>
+                      <input type="text" name="appraisal-period" id="appraisal-period">
+                      <label for="date">Date Hired</label>
+                      <input type="date" id="date-input" placeholder="Select date">
+                      <button class="next-btn">Next</button>
+                  </div>
+                  <div class="step">
+                    <!-- Step 2 content -->
+                    <h3>Step 2/3</h3>
+                    <h2>Evaluate Click</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam aliquam aspernatur libero provident omnis eius consequuntur cumque, cum voluptatibus debitis. Sequi, expedita laudantium? At culpa dolore voluptas, in consequatur officia.</p>
+                    <hr>
+                  
+                    <div class="question">
+                      <h4>1. Knowledge of Duties</h4>
+                      <p class="question-info">Demonstrates a clear understanding and ability to perform the assigned job duties and has in-depth knowledge and technical expertise. Learns and masters applicable new skills and procedures. 
+                        <br>
+                        This assesses the effective application of the knowledge and skills required by the job being performed, including but not limited to, written and oral communication.
+                      </p>
+                      <div class="choices">
+                        <button class="choice" data-question="1">One</button>
+                        <button class="choice" data-question="1">Two</button>
+                        <button class="choice" data-question="1">Three</button>
+                        <button class="choice" data-question="1">Four</button>
+                      </div>
+                      <label for="comment">Comment:</label>
+                      <input type="text" name="comment-1" id="comment-1" class="input-comment">
+                    </div>
+                    
+                    <div class="question">
+                      <h4>2. Productivity</h4>
+                      <p class="question-info">An acceptable volume of work is completed in a timely manner.
+                        <br>
+                        This assesses the volume (i.e., speed and consistency) of output taking into account intervening assignments and/or other factors affecting performance which were outside the employee's control.
+                      </p>
+                      <div class="choices">
+                        <button class="choice" data-question="2">One</button>
+                        <button class="choice" data-question="2">Two</button>
+                        <button class="choice" data-question="2">Three</button>
+                        <button class="choice" data-question="2">Four</button>
+                      </div>
+                      <label for="comment">Comment:</label>
+                      <input type="text" name="comment-2" id="comment-2" class="input-comment">
+                    </div>
+                    
+                    <div class="question">
+                      <h4>3. Quality of Work/Accuracy</h4>
+                      <p class="question-info">Performs a high level of competency, accuracy and thoroughness. Uses initiative and creativity as appropriate in providing service.
+                        <br>
+                        This assesses the quality (i.e., substance, content, completeness and accuracy) of output taking into account intervening assignments and/or other factors affecting performance which were outside the employee's control.
+                      </p>
+                      <div class="choices">
+                        <button class="choice" data-question="3">One</button>
+                        <button class="choice" data-question="3">Two</button>
+                        <button class="choice" data-question="3">Three</button>
+                        <button class="choice" data-question="3">Four</button>
+                      </div>
+                      <label for="comment">Comment:</label>
+                      <input type="text" name="comment-3" id="comment-3" class="input-comment">
+                    </div>
+                    
+                    <div class="question">
+                      <h4>4. Attendance</h4>
+                      <p class="question-info">Schedules and uses leave in an appropriate manner that is sensitive to the department and workload priorities. Adheres to work schedule.</p>
+                      <div class="choices">
+                        <button class="choice" data-question="4">One</button>
+                        <button class="choice" data-question="4">Two</button>
+                        <button class="choice" data-question="4">Three</button>
+                        <button class="choice" data-question="4">Four</button>
+                      </div>
+                      <label for="comment">Comment:</label>
+                      <input type="text" name="comment-4" id="comment-4" class="input-comment">
+                    </div>
+                    
+                    <div class="question">
+                      <h4>5. Punctuality</h4>
+                      <p class="question-info">Adheres to work schedule; reports to work on time; abides by company policy on break periods.</p>
+                      <div class="choices">
+                        <button class="choice" data-question="5">One</button>
+                        <button class="choice" data-question="5">Two</button>
+                        <button class="choice" data-question="5">Three</button>
+                        <button class="choice" data-question="5">Four</button>
+                      </div>
+                      <label for="comment">Comment:</label>
+                      <input type="text" name="comment-5" id="comment-5" class="input-comment">
+                    </div>
+                    
+                    <div class="question">
+                      <h4>6. Effectiveness/Efficiency</h4>
+                      <p class="question-info">Demonstrates the ability to use time wisely in producing the volume or quantity of work required for the position.</p>
+                      <div class="choices">
+                        <button class="choice" data-question="6">One</button>
+                        <button class="choice" data-question="6">Two</button>
+                        <button class="choice" data-question="6">Three</button>
+                        <button class="choice" data-question="6">Four</button>
+                      </div>
+                      <label for="comment">Comment:</label>
+                      <input type="text" name="comment-6" id="comment-6" class="input-comment">
+                    </div>
+                    
+                    <div class="question">
+                      <h4>7. Follow Through/Prioritize</h4>
+                      <p class="question-info">Demonstrates good judgment in planning, organizing, and completing work.</p>
+                      <div class="choices">
+                        <button class="choice" data-question="7">One</button>
+                        <button class="choice" data-question="7">Two</button>
+                        <button class="choice" data-question="7">Three</button>
+                        <button class="choice" data-question="7">Four</button>
+                      </div>
+                      <label for="comment">Comment:</label>
+                      <input type="text" name="comment-7" id="comment-7" class="input-comment">
+                    </div>
+                    
+                    <div class="question">
+                      <h4>8. Interpersonal/Communication Skills</h4>
+                      <p class="question-info">The ability to listen, hear and respond in a sensitive, meaningful way that enhances mutual respect with others as the employee carries out his/her responsibilities.</p>
+                      <div class="choices">
+                        <button class="choice" data-question="8">One</button>
+                        <button class="choice" data-question="8">Two</button>
+                        <button class="choice" data-question="8">Three</button>
+                        <button class="choice" data-question="8">Four</button>
+                      </div>
+                      <label for="comment">Comment:</label>
+                      <input type="text" name="comment-8" id="comment-8" class="input-comment">
+                    </div>
+                    
+                    <div class="question">
+                      <h4>9. Adaptability/Initiative</h4>
+                      <p class="question-info">Demonstrates the ability to learn new tasks, develop new skills, and to accept new ideas as the work environment changes over time.</p>
+                      <div class="choices">
+                        <button class="choice" data-question="9">One</button>
+                        <button class="choice" data-question="9">Two</button>
+                        <button class="choice" data-question="9">Three</button>
+                        <button class="choice" data-question="9">Four</button>
+                      </div>
+                      <label for="comment">Comment:</label>
+                      <input type="text" name="comment-9" id="comment-9" class="input-comment">
+                    </div>
+                    
+                    <div class="question">
+                      <h4>10. Flexibility</h4>
+                      <p class="question-info">Demonstrates the ability to accommodate unexpected changes in the work routine.</p>
+                      <div class="choices">
+                        <button class="choice" data-question="10">One</button>
+                        <button class="choice" data-question="10">Two</button>
+                        <button class="choice" data-question="10">Three</button>
+                        <button class="choice" data-question="10">Four</button>
+                      </div>
+                      <label for="comment">Comment:</label>
+                      <input type="text" name="comment-10" id="comment-10" class="input-comment">
+                    </div>
+                    
+                    <div class="question">
+                      <h4>11. Cooperative/Team Player</h4>
+                      <p class="question-info">Works well and effectively with others; responsive, positive attitude towards work; ability and willingness to work with associates, administrators, and subordinates towards common goals; accommodating and dependable.</p>
+                      <div class="choices">
+                        <button class="choice" data-question="11">One</button>
+                        <button class="choice" data-question="11">Two</button>
+                        <button class="choice" data-question="11">Three</button>
+                        <button class="choice" data-question="11">Four</button>
+                      </div>
+                      <label for="comment">Comment:</label>
+                      <input type="text" name="comment-11" id="comment-11" class="input-comment">
+                    </div>
+                    <div class="evaluation">
+                      <h1>Evaluation:</h1>
+                    <table id="tableEl">
+                      <tr>
+                          <th>Performance Indicators</th>
+                          <th>Score</th>
+                      </tr>
+                      <tr>
+                          <td>Knowledge of Duties</td>
+                          <td id="score1">0</td>
+                      </tr>
+                      <tr>
+                        <td>Productivity</td>
+                        <td id="score2">0</td>
+                    </tr>
+                      <tr>
+                          <td>Quality of Work/Accuracy</td>
+                          <td id="score3">0</td>
+                      </tr>
+                      <tr> 
+                          <td>Attendance</td>
+                          <td id="score4">0</td>
+                      </tr>
+                      <tr>
+                          <td>Punctuality</td>
+                          <td id="score5">0</td>
+                      </tr>
+                      <tr>
+                          <td>Effectiveness/Efficiency</td>
+                          <td id="score6">0</td>
+                      </tr>
+                      <tr>
+                          <td>Follow Through/Prioritize</td>
+                          <td id="score7">0</td>
+                      </tr>
+                      <tr>
+                          <td>Interpersonal/Communication Skills</td>
+                          <td id="score8">0</td>
+                      </tr>
+                      <tr>
+                          <td>Adaptability/Initiative</td>
+                          <td id="score9">0</td>
+                      </tr>
+                      <tr>
+                          <td>Flexibility</td>
+                          <td id="score10">0</td>
+                      </tr>
+                      <tr>
+                          <td>Cooperative/Team Player</td>
+                          <td id="score11">0</td>
+                      </tr>
+                      <tr>
+                          <td >AVERAGE</td>
+                          <td id="average-td">0</td>
+                      </tr>
+                      </table>
+                      <div class="buttons-page2">
+                        <button class="next-btn">Next</button>
+                      <button id="back-page-btn" class="back2">back</button>
+                      </div>
+                      
+                  </div>
+                  </div>
+                  
+
+                
+                   
+                     
+             <div class="step">
+               <!-- Step 3 content -->
+                   <h3>Step 3/3</h3>
+                    <h2>RECHECK:</h2>
+                    <h1 class="big-text">ARE YOU <span id="animate">SURE</span></h1>
+                    <div class="submit">
+                        <button id="submit-btn" class="submit">Submit</button>
+                    </div>
+                    <div class="btns">
+                        <button id="restart-form-btn" class="restart">restart</button>  <button id="back-page-btn" class="back">back</button>
+                     </div>
+               </div>
+           </div>
+         </main>
+    </div>
+<footer>
+  <!---
+    <div class="line">Footer</div>
+  -->
+    <div class="container2">
+      <div class="outsource">
+        <img class="logo" src="logo1.png">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit repellendus, repellat asperiores eum quaerat corrupti atque officia sint aspernatur pariatur mollitia possimus laboriosam dignissimos odit voluptates tempore necessitatibus accusantium omnis.</p>
+      </div>
+      <div class="links1">
+        <ul>
+          <li><h6>About</h6></li>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Respondants</a></li>
+        </ul>
+      </div>
+      <div class="links1">
+        <ul>
+          <li><h6>Contacts</h6></li>
+          <li><a href="">Facebook</a></li>
+          <li><a href="">Website</a></li>
+          <li><a href="">Contact Worker</a></li>
+        </ul>
+      </div>
+      <div class="links1">
+        <ul>
+          <li><h6>Something</h6></li>
+          <li><a href="">IDK</a></li>
+          <li><a href="">IDK</a></li>
+          <li><a href="">IDK</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+    <script src="eval.js" type="module"></script>
+</body>
+</html>
