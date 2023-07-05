@@ -137,7 +137,7 @@ function saveData() {
     date_prepared: ""
   
   })
-  alert("Submitted")
+  alert("Form Submitted")
   resetForm()
 }
 
