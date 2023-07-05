@@ -51,6 +51,8 @@ submitBtn.addEventListener("click",function(){
   saveData()
   resetForm();
   showTab(0);
+
+  window.location.href = "respond.html"
 });
 
 choicesButtons.forEach((button) => {
