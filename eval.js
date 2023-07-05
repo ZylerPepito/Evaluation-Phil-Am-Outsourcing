@@ -290,3 +290,6 @@ choicesBtns.forEach(function(button) {
     currentChoice.classList.add('border-button');
   });
 });
+
+
+

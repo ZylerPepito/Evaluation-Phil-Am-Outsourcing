@@ -239,7 +239,7 @@ input {
   border-radius: 20px;
 }
 .reveal-table {
-  display: inline-table;
+  display:inline-table;
   opacity: 100%;
 }
 table  {
@@ -527,7 +527,28 @@ table {
      .container2 {
       flex-direction: column;
       align-items: center;
-      
+  }
+ 
+  .print-btn {
+    margin: 0;
+    padding: 0;
+  }
+
+  .reveal-details-box button {
+    width: 100%;
+    margin: 7px 0;
+    padding: 5px 0;
+    border-radius: 10px;
+    background: white;
+    border: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    font-family: var(--font-text);
+    cursor:alias;
+  
+  }
+  .reveal {
+    height: 210px;
   }
     }
     
@@ -550,3 +571,29 @@ table {
       border-radius: 15px;
       padding: 5px;
     }
+
+    /* Td close and open*/
+    .comment-row {
+      display: none;
+     
+  }
+    .reveal-comment {
+      display: table-row;
+      
+     
+    }
+   
+    td[id^="comment"] {
+      background-color: beige;
+      width: 100%;
+    }
+
+    
+    @media (min-width: 1201px) {
+      .detail-btn {
+        display: none;
+      }
+       
+    }
+      
+      
