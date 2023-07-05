@@ -294,10 +294,6 @@ input {
  
   }
 
- .step:nth-child(3) {
-  height: 65vh;
- }
-  
 
   .choices button {
     border: none;
@@ -538,6 +534,7 @@ input {
      .left {
         display: inline-block;
      }
+    
   }
 
 
@@ -622,4 +619,29 @@ input {
 
   .border-button {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+  @media (max-width: 500px) {
+    .choices {
+     padding: 0;
+     margin: 0;
+      width: 100%;
+      border: 1px solid black;
+      padding: 0 ;
+      background: white;
+      border: none;
+      border-radius: 10px;
+      box-shadow: inset 1px 3px 4px 4px rgb(245, 245, 245);
+    }
+    
+  .choices button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: black;
+    font-size: 1.25rem;
+    padding: 15px 10px;
+    margin: 0;
+  }
+    
   }
