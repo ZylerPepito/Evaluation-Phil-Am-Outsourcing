@@ -231,9 +231,12 @@ nextBtn.forEach((button) => {
    button.addEventListener("click", function () {
     if (currentStep === 1) {
       validateForm();
-    } else {
+    } else if  (currentStep === 0 && nameInput.textContent === "") {
+      alert('Please Fill in Name.')
+    }  else {
       nextPrev();
     }
+
    })
 })
 
