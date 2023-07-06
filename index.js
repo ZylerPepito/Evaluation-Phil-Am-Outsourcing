@@ -201,6 +201,7 @@ function createUserBox(username, appraisal, date, position, average, scores, com
               window.location.href = printURL;
              
             });
+            
           detailsButton.addEventListener('click', function() {
             const tableEl = document.getElementById('tableEl');
             modalContainer.style.display = "block";

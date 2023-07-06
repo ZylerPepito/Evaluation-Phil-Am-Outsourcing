@@ -228,7 +228,13 @@ const nextBtn = document.querySelectorAll('.next-btn');
 console.log(nextBtn)
 
 nextBtn.forEach((button) => {
-  button.addEventListener("click", nextPrev)
+   button.addEventListener("click", function () {
+    if (currentStep === 1) {
+      validateForm();
+    } else {
+      nextPrev();
+    }
+   })
 })
 
 
@@ -293,3 +299,29 @@ choicesBtns.forEach(function(button) {
 
 
 
+function validateForm() {
+  let isValid = true;
+
+  const questions = document.querySelectorAll('.question');
+
+  questions.forEach((question) => {
+    const choices = question.querySelectorAll('.choices');
+    let isChoiceSelected = false;
+
+    choices.forEach((choice) => {
+      if (choice.classList.contains('selected')) {
+        isChoiceSelected = true;
+      }
+    });
+
+    if (!isChoiceSelected) {
+      isValid = false;
+    }
+  });
+
+  if (isValid) {
+   nextPrev()
+  } else {
+    alert('Please answer all the questions.');
+  }
+}
