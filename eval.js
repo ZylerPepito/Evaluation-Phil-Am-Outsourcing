@@ -143,16 +143,27 @@ function saveData() {
   resetForm()
 }
 
-
 function calculateAverageOfChoices() {
   const scores = Array.from(scoreTds).map((scoreTd) => parseInt(scoreTd.innerText));
-
-  const sum = scores.reduce((accumulator, score) => accumulator + score, 0);
-  const average = sum / scores.length;
+  const weights = [0.9, 0.8, 0.7, 0.6, 1, 0.6, 0.7, 0.5, 0.9, 1, 0.5];
+  
+  if (scores.length !== weights.length) {
+    console.error("Number of scores and weights don't match");
+    return;
+  }
+  
+  let weightedSum = 0;
+  let totalWeight = 0;
+  
+  for (let i = 0; i < scores.length; i++) {
+    weightedSum += scores[i] * weights[i];
+    totalWeight += weights[i];
+  }
+  
+  const average = weightedSum / totalWeight;
   
   averageTd.innerText = isNaN(average) ? '' : average.toFixed(2);
 }
-
 
 function resetForm() {
   nameInput.value = "";
@@ -231,7 +242,7 @@ nextBtn.forEach((button) => {
    button.addEventListener("click", function () {
     if (currentStep === 1) {
       validateForm();
-    } else if  (currentStep === 0 && nameInput.textContent === "") {
+    } else if  (currentStep === 0 && nameInput.value === "") {
       alert('Please Fill in Name.')
     }  else {
       nextPrev();
