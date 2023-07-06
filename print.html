@@ -4,8 +4,302 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Print Evaluation Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+       
+        .container {
+            width: 800px;
+            margin: 0 auto;
+           
+        }
+        .logo {
+            width: 150px;
+        }
+        .title {
+            text-align: left;
+        }
+        h1, h2, h3, h4 {
+            margin-top: 10px;
+            
+        }
+
+        .table {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table  {
+  
+
+ 
+
+  width: 100%;
+}
+
+
+table  th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+ 
+  
+}
+
+
+table  th {
+  background-color: #f5f5f5;
+  font-size: 2rem;
+}
+
+
+[id^="-text"] {
+    text-align: right;
+}
+
+
+
+
+hr {
+    margin: 20px 0;
+}
+
+[id^="comment-open"] {
+    font-weight: 600;
+}
+
+.sign {
+    display: flex;
+    justify-content: space-around;
+}
+.sign h3 {
+    
+    margin: 100px 0;
+    border-top: 1px solid black;
+}
+    </style>
 </head>
 <body>
+    <div class="wrapper">
+
+        <div class="container">
+            <div class="logo">
+                <img class="logo" src="logo1.png">
+            </div>
+            <div class="title">
+                <h1 id="username"></h1>
+                <h2 id="position"></h2>
+                <h3 id="appraisal-period"></h3>
+                <h3 id="date"></h4>
+
+                 
+            </div>
+            <hr>
+            <div class="table">
+                <table id="tableEl">
+                    <tr>
+                        <th>Performance Indicators</th>
+                        <th>Score</th>
+                    </tr>
+                    <tr id="comment-open1">
+                        <td>1. Knowledge of Duties</td>
+                        <td id="knowledge-duties-text">0</td>
+                    </tr>
+                    <tr id="comments-td-1" class="comment-row">
+                        <td id="comment1" colspan="2"></td>
+                    </tr>
+                <tr id="comment-open2">
+                    <td> 2.Productivity</td>
+                    <td id="productivity-text">0</td>
+                </tr>
+                <tr id="comments-td-2" class="comment-row">
+                    <td id="comment2" colspan="2"></td>
+                </tr>
+                    <tr id="comment-open3">
+                        <td>3. Quality of Work/Accuracy</td>
+                        <td id="accuracy-text">0</td>
+                    </tr>
+                    <tr id="comments-td-3" class="comment-row">
+                        <td id="comment3" colspan="2"></td>
+                    </tr>
+                    <tr id="comment-open4"> 
+                        <td>4. Attendance</td>
+                        <td id="attendance-text">0</td>
+                    </tr>
+                    <tr id="comments-td-4" class="comment-row">
+                        <td id="comment4" colspan="2"></td>
+                    </tr>
+                    <tr id="comment-open5">
+                        <td>5. Punctuality</td>
+                        <td id="punctuality-text">0</td>
+                    </tr>
+                    <tr id="comments-td-5" class="comment-row">
+                        <td id="comment5" colspan="2"></td>
+                    </tr>
+                    <tr id="comment-open6">
+                        <td>6. Effectiveness/Efficiency</td>
+                        <td id="efficiency-text">0</td>
+                    </tr>
+                    <tr id="comments-td-6" class="comment-row">
+                        <td id="comment6" colspan="2"></td>
+                    </tr>
+                    <tr id="comment-open7">
+                        <td>7. Follow Through/Prioritize</td>
+                        <td id="priorities-text">0</td>
+                    </tr>
+                    <tr id="comments-td-7" class="comment-row">
+                        <td id="comment7" colspan="2"></td>
+                    </tr>
+                    <tr id="comment-open8">
+                        <td>8. Interpersonal/Communication Skills</td>
+                        <td id="communication-text">0</td>
+                    </tr>
+                    <tr id="comments-td-8" class="comment-row">
+                        <td id="comment8" colspan="2"></td>
+                    </tr>
+                    <tr id="comment-open9">
+                        <td>9. Adaptability/Initiative</td>
+                        <td id="adaptility-text">0</td>
+                    </tr>
+                    <tr id="comments-td-9" class="comment-row">
+                        <td id="comment9" colspan="2"></td>
+                    </tr>
+                    <tr id="comment-open10">
+                        <td>10. Flexibility</td>
+                        <td id="flexibility-text">0</td>
+                    </tr>
+                    <tr id="comments-td-10" class="comment-row">
+                        <td id="comment10" colspan="2"></td>
+                    </tr>
+                    <tr id="comment-open11">
+                        <td>11. Cooperative/Team Player</td>
+                        <td id="cooperative-text">0</td>
+                    </tr>
+                    <tr id="comments-td-11" class="comment-row">
+                        <td id="comment11" colspan="2"></td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+       
+    </div>
     
+    <div class="sign">
+        <div class="supervisor-sign">
+            <h3>Supervisor Signature</h3>
+        </div>
+        <div class="emlployee-sign">
+            <h3>Employee Signature</h3>
+        </div>
+    </div>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
+        import { getDatabase,get, ref, onValue } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';
+
+     // Your web app's Firebase configuration
+        const firebaseConfig = {
+        apiKey: "AIzaSyCJOnw15u6nymfMu2xocawWBj08VIKM_O4",
+        authDomain: "philam-evaluation-database.firebaseapp.com",
+        databaseURL: "https://philam-evaluation-database-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "philam-evaluation-database",
+        storageBucket: "philam-evaluation-database.appspot.com",
+        messagingSenderId: "435913174368",
+        appId: "1:435913174368:web:5909549a8e1fd573e2c205"
+        };
+
+        // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    //table 
+    const knowledgeDutiesText = document.getElementById('knowledge-duties-text');
+ const productivityText = document.getElementById('productivity-text');
+ const accuracyText = document.getElementById('accuracy-text');
+ const attendanceText = document.getElementById('attendance-text');
+ const punctualityText = document.getElementById('punctuality-text');
+ const efficiencyText = document.getElementById('efficiency-text');
+ const prioritiesText = document.getElementById('priorities-text');
+ const communicationText = document.getElementById('communication-text');
+ const adaptilityText = document.getElementById('adaptility-text');
+ const flexibilityText = document.getElementById('flexibility-text');
+ const cooperativeText = document.getElementById('cooperative-text');
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const desiredId = urlParams.get('id');
+
+    const respondantRef = ref(db, `eval/${desiredId}`);
+
+    onValue(respondantRef, (snapshot) => {
+
+      
+            const evaluation = snapshot.val();
+            
+            const scores = {
+                knowledgeDuties: evaluation.performance_indicators_1,
+                productivity: evaluation.KOF_2,
+                accuracy: evaluation.Accuracy_3,
+                attendance: evaluation.Attendance_4,
+                punctuality: evaluation.Punctuality_5,
+                efficiency: evaluation.Effectiveness_6,
+                priorities: evaluation.Prioritize_7,
+                communication: evaluation.interpersonal_8,
+                adaptility: evaluation.adaptility_9,
+                flexibility: evaluation.flexibility_10,
+                cooperative: evaluation.cooperative_11
+            };
+
+            const comments = {
+                comment1: evaluation.comment_1,
+                comment2: evaluation.comment_2,
+                comment3: evaluation.comment_3,
+                comment4: evaluation.comment_4,
+                comment5: evaluation.comment_5,
+                comment6: evaluation.comment_6,
+                comment7: evaluation.comment_7,
+                comment8: evaluation.comment_8,
+                comment9: evaluation.comment_9,
+                comment10: evaluation.comment_10,
+                comment11: evaluation.comment_11,
+            };
+
+            knowledgeDutiesText.textContent = scores.knowledgeDuties;
+            productivityText.textContent = scores.productivity;
+            accuracyText.textContent = scores.accuracy;
+            attendanceText.textContent = scores.attendance;
+            punctualityText.textContent = scores.punctuality;
+            efficiencyText.textContent = scores.efficiency;
+            prioritiesText.textContent = scores.priorities;
+            communicationText.textContent = scores.communication;
+            adaptilityText.textContent = scores.adaptility;
+            flexibilityText.textContent = scores.flexibility;
+            cooperativeText.textContent = scores.cooperative;
+
+            for (let i = 1; i <= 11; i++) {
+                const commentKey = `comment${i}`;
+                const commentValue = comments[commentKey];
+                const commentTd = document.getElementById(commentKey);
+                commentTd.textContent = commentValue;
+            }
+
+            const usernameText = document.getElementById('username');
+            const positionText = document.getElementById('position');
+            const appraisalText = document.getElementById('appraisal-period');
+            const dateText = document.getElementById('date');
+
+            usernameText.textContent = evaluation.name;
+            //dateText.textContent = evaluation.date;
+            appraisalText.textContent = evaluation.date + ' / ' + evaluation.appraisalPeriod;
+            positionText.textContent = evaluation.position;
+        });
+</script>
+
+      
+        
 </body>
 </html>

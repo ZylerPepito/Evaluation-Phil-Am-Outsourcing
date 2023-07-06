@@ -69,7 +69,7 @@ get(evaluationRef).then((snapshot) => {
       comment10: evaluation.comment_10,
       comment11: evaluation.comment_11,
     }
-        createUserBox(evaluation.name, evaluation.appraisalPeriod, evaluation.date, evaluation.position, evaluation.average, scores, comments)
+        createUserBox(evaluation.name, evaluation.appraisalPeriod, evaluation.date, evaluation.position, evaluation.average, scores, comments, evaluationId)
       
     }
   }
@@ -88,7 +88,7 @@ for (let a = 1; a < 12; a++) {
   })
 }
 
-function createUserBox(username, appraisal, date, position, average, scores, comments) {
+function createUserBox(username, appraisal, date, position, average, scores, comments, id) {
         const userList = document.querySelector('.list ul');
       
         // Create the necessary HTML elements
@@ -192,13 +192,21 @@ function createUserBox(username, appraisal, date, position, average, scores, com
                 }
               })
              })
-     
-
+             printButton.addEventListener('click', function() {
+         
+              const username = usernameElement.textContent;
+            
+              const printURL = `print.html?id=${encodeURIComponent(id)}`;
+            
+              window.location.href = printURL;
+             
+            });
           detailsButton.addEventListener('click', function() {
             const tableEl = document.getElementById('tableEl');
             modalContainer.style.display = "block";
 
-
+            
+            
             tableEl.classList.add('reveal-table')
             knowledgeDutiesText.textContent = scores.knowledgeDuties;
             productivityText.textContent = scores.productivity;
