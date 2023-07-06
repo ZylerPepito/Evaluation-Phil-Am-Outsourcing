@@ -160,7 +160,8 @@ function calculateAverageOfChoices() {
     totalWeight += weights[i];
   }
   
-  const average = weightedSum / totalWeight;
+  //const average = weightedSum / totalWeight;
+  const average = weightedSum;
   
   averageTd.innerText = isNaN(average) ? '' : average.toFixed(2);
 }
