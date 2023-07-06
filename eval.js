@@ -145,7 +145,7 @@ function saveData() {
 
 function calculateAverageOfChoices() {
   const scores = Array.from(scoreTds).map((scoreTd) => parseInt(scoreTd.innerText));
-  const weights = [0.9, 0.8, 0.7, 0.6, 1, 0.6, 0.7, 0.5, 0.9, 1, 0.5];
+  const weights = [0.1, 0.15, 0.15, 0.05, 0.05, 0.1, 0.1, 0.1, 0.05, 0.05, 0.1];
   
   if (scores.length !== weights.length) {
     console.error("Number of scores and weights don't match");
