@@ -183,6 +183,10 @@ hr {
                     <tr id="comments-td-11" class="comment-row">
                         <td id="comment11" colspan="2"></td>
                     </tr>
+                    <tr id="comment-open12">
+                        <td>Average</td>
+                        <td id="average-text">0</td>
+                    </tr>
                 </table>
             </div>
             
@@ -229,6 +233,7 @@ hr {
  const adaptilityText = document.getElementById('adaptility-text');
  const flexibilityText = document.getElementById('flexibility-text');
  const cooperativeText = document.getElementById('cooperative-text');
+ const averageText = document.getElementById('average-text');
 
     const urlParams = new URLSearchParams(window.location.search);
     const desiredId = urlParams.get('id');
@@ -279,6 +284,8 @@ hr {
             adaptilityText.textContent = scores.adaptility;
             flexibilityText.textContent = scores.flexibility;
             cooperativeText.textContent = scores.cooperative;
+            averageText.textContent = evaluation.average;
+
 
             for (let i = 1; i <= 11; i++) {
                 const commentKey = `comment${i}`;
